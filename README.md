@@ -1,6 +1,6 @@
-# volto-intkwebsite-theme
+# volto-museumhilversum-theme
 
-[Volto](https://github.com/plone/volto) INTK Volto Theme
+[Volto](https://github.com/plone/volto) INTK Museum Hilversum Theme
 
 ## Quick Start
 
