@@ -1,0 +1,240 @@
+/*******************************
+      Slider squared
+*******************************/
+
+.block.listing.slider {
+    width: 100%;
+}
+
+.slick-carousel:not(.slick-initialized) {
+    visibility: hidden;
+}
+
+.slick-carousel {
+	position: relative;
+	float: none;
+    margin: 30px;
+}
+
+.slick-carousel:focus,
+.slick-slide:focus,
+.base-section:focus,
+.slick-slide div[aria-hidden='false']:focus {
+    outline: none;
+}
+
+/* Slider rounded theme */
+.slick-carousel.rounded {
+
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media(max-width: 991px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.base-section {
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		@media(min-width: 992px) {
+			padding-top: 50px;
+            padding-bottom: 50px;
+		}
+	}
+
+	.base-container {
+		padding: 0px 0px;
+		margin: 0px auto;
+
+		@media(min-width: 992px) {
+			padding-right: 45px;
+		}
+	}
+
+	.base-content {
+		box-sizing: border-box;
+	    display: flex;
+	    flex: 0 1 auto;
+	    flex-flow: row wrap;
+	    margin-right: -0.5rem;
+	    margin-left: -0.5rem;
+	}
+
+	.image-container {
+		box-sizing: border-box;
+	    flex: 0 0 auto;
+	    padding-right: 0.5rem;
+	    padding-left: 0.5rem;
+
+		flex-basis: 100%;
+    	max-width: 100%;
+    	display: block;
+
+    	@media(min-width: 992px) {
+    		flex-basis: 40%;
+    		max-width: 40%;
+    	}
+
+    	.slide-img-wrapper {
+			display: block;
+			padding-left: 0px;
+			padding-right: 0px;
+
+			@media(min-width: 992px) {
+				padding-left: 60px;
+				padding-right: 20px;
+			}
+        }
+
+		img {
+			border-radius: 50%;
+			max-width: 200px;
+			overflow: hidden;
+			margin: 0 auto;
+
+			@media(min-width: 992px) {
+				width: 90%;
+				max-width: 225px;
+			}
+
+		}
+	}
+
+	.slide-details {
+		box-sizing: border-box;
+    	flex: 0 0 auto;
+   		padding-right: 0.5rem;
+    	padding-left: 0.5rem;
+
+		flex-basis: 100%;
+    	max-width: 100%;
+    	display: block;
+
+    	@media(min-width: 992px) {
+    		flex-basis: 60%;
+    		max-width: 60%;
+    	}
+
+    	p.quote {
+    		position: relative;
+    		line-height: 1.7;
+    		font-size: 1.250em;
+    		margin: 0px 0px 1.875rem;
+    		color: rgb(99, 99, 99);
+    		margin-top: 50px;
+
+    		font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    		text-align: center;
+    		font-weight: 700;
+
+    		@media(min-width: 992px) {
+    			font-size: 1.400em;
+    			text-align: left;
+    		}
+    	}
+
+    	p.quote:before {
+		    content: "";
+            background-image: url(https://static.buffer.com/marketing/static/icons/quotes.svg);
+            opacity: 0.70;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    left: 0px;
+		    width: 35px;
+		    height: 35px;
+		    top: -50px;
+    	}
+
+    	p.author {
+    		font-size: 1.125em;
+    		margin-bottom: 0px;
+    	}
+	}
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+	.slick-dots li button {
+		background-color: transparent;
+    	border-color: transparent;
+    	width: 25px;
+    	height: 25px;
+
+        &:hover,
+        &:focus,
+        &:active:focus {
+            &:before {
+                opacity: 1;
+            }
+        }
+	}
+
+	.slick-dots li button:before {
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .15;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+		font-size: 25px;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+	}
+
+	.slick-dots li {
+		width: 25px;
+		height: 25px;
+	}
+
+	.slick-dots {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+
+		position: relative;
+		bottom: 0px;
+		@media(min-width: 992px) {
+			position: absolute;
+			bottom: -25px;
+		}
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 0.7;
+        color: black;
+    }
+
+	&.slick-dotted.slick-slider {
+		margin-bottom: 30px;
+
+		@media(min-width: 992px) {
+			margin-bottom: 70px;
+		}
+	}
+}

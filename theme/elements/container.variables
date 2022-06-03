@@ -1,0 +1,19 @@
+/*******************************
+        INTK Theme Overrides
+*******************************/
+
+@containerMaxSize: 707px;
+@uiContainerMaxSize: 1140px;
+@uiContainerMarginLeftDesktop: auto;
+@uiContainerMarginRightDesktop: auto;
+@columnsViewWidth: 100%;
+@columnsViewPaddingLeftMobile: 35px;
+@columnsViewPaddingRightMobile: 35px;
+@columnsViewMargin: 0px;
+@columnsViewPaddingLeftTablet: 35px;
+@columnsViewPaddingRightTablet: 35px;
+@columnsViewPaddingLeftDesktop: 120px;
+@columnsViewPaddingRightDesktop: 120px;
+@columnsViewContentCoreMarginTop: 0px;
+@columnsViewMaxWidthDesktop: 1540px;
+@columnsViewMarginDesktop: 0 auto;

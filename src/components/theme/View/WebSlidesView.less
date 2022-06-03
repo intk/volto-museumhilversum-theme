@@ -1,0 +1,61 @@
+/*-------------------
+    Webslides vars
+--------------------*/
+@titleNavWrapperDisplay: none;
+@headerWrapperPadding: 0px;
+@headerWrapperMargin: 0px;
+
+@logoNavWrapperPosition: absolute;
+@logoNavWrapperPadding: 1em;
+@logoNavWrapperMargin: 1rem 0;
+@logoNavWrapperPaddingTop: 50px;
+@logoNavWrapperPaddingBottom: 53px;
+@logoNavWrapperMarginBottom: 25px;
+@logoNavWrapperPaddingLeft: 0px;
+@logoNavWrapperMarginTop: 0px;
+@logoNavWrapperPaddingMobile: 30px 1em 53px 16px;
+
+@contentAreaMargin: 0;
+@contentAreaPadding: 0;
+@webslidesDivHeight: 100vh;
+
+/*-------------------
+    Webslides view
+--------------------*/
+
+body.webslides_view {
+  .title-nav-wrapper,
+  #footer,
+  .ui.basic.segment.header-wrapper .title-nav-wrapper {
+    display: @titleNavWrapperDisplay;
+  }
+
+  .header-wrapper {
+    padding: @headerWrapperPadding !important;
+    margin: @headerWrapperMargin !important;
+  }
+
+  .logo-nav-wrapper {
+    position: @logoNavWrapperPosition;
+    padding: @logoNavWrapperPadding;
+    margin: @logoNavWrapperMargin;
+    padding-top: @logoNavWrapperPaddingTop;
+    padding-bottom: @logoNavWrapperPaddingBottom;
+    margin-bottom: @logoNavWrapperMarginBottom;
+    padding-left: @logoNavWrapperPaddingLeft;
+    margin-top: @logoNavWrapperMarginTop;
+
+    @media (max-width: 991px) {
+      padding: @logoNavWrapperPaddingMobile;
+    }
+  }
+
+  .content-area {
+    margin: @contentAreaMargin;
+    padding: @contentAreaPadding;
+  }
+
+  #webslides {
+    height: @webslidesDivHeight;
+  }
+}

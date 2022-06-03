@@ -1,0 +1,75 @@
+/*******************************
+      INTK Theme Variables
+*******************************/
+
+@segmentContentAreaPaddingTopMobile: 0px;
+@segmentContentAreaMarginTopMobile: 0px;
+@segmentSideBarMetadataContainerImgMaxWidth: 50%;
+
+/*-------------------
+      Listing
+--------------------*/
+@listingItemImageMarginRight: 0px;
+@listingItemImageWidth: 100%;
+
+/*-------------------
+      Footer
+--------------------*/
+@footerTextColor: #ffffff;
+@footerTextLineHeight: 1.1;
+
+@footerPadding: 15px 0px 100px 0px;
+@footerParagraphColor: @footerTextColor;
+@footerParagraphFontSize: 16px;
+@footerLineHeight: 30px;
+@footerMarginBottom: 0px;
+
+@footerLeftTitleFontSize: 18px;
+@footerLeftTitleColor: @footerTextColor;
+@footerLeftTitleFontWeight: @bold;
+@footerLeftTitleMarginBottom: 10px;
+@footerLeftTitleMarginTop: 10px;
+@footerLeftTitleLineHeight: @footerTextLineHeight;
+
+@footerRightTitleFontFamily: 'Antonio', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@footerRightTitleFontSize: 14px;
+@footerRightTitleColor: @footerTextColor;
+@footerRightTitleFontWeight: @bold;
+@footerRightTitleTextTransform: uppercase;
+@footerRightTitleMarginBottom: 10px;
+@footerRightTitleMarginTop: 10px;
+@footerRightTitleLineHeight: @footerTextLineHeight;
+
+@footerLinkColor: @footerTextColor;
+@footerLinkTextDecoration: underline;
+@footerLinkLineHeight: 1.88;
+@footerLinkHoverTextDecoration: none;
+
+@footerWrapperDisplay: flex;
+@footerWrapperJustifyContent: space-between;
+@footerWrapperSectionsTextAlign: right;
+@footerWrapperDisplayMobile: block;
+@footerWrapperSectionsTextAlignMobile: left;
+@footerWrapperSectionsMarginTopMobile: 30px;
+@footerWrapperSectionsWidthMobile: 100%;
+
+@footerAddressWidth: 65%;
+
+@footerPaddingLeftMobile: 0px;
+@footerPaddingRightMobile: 0px;
+
+@footerPaddingLeftLarge: 0px;
+@footerPaddingRightLarge: 0px;
+
+@footerUiSegmentPadding: 0px;
+@footerUiSegmentMargin: 0px;
+@footerUiContainerWidth: 100%;
+
+/*-------------------
+      Listing
+--------------------*/
+
+/*-------------------
+    Blocks (Testimonials)
+--------------------*/
+

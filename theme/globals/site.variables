@@ -1,0 +1,167 @@
+/*******************************
+      INTK Theme Variables
+*******************************/
+
+@bodyFontSmoothing: antialiased;
+
+/*-------------------
+       Fonts
+--------------------*/
+@fontName: "GeneralSans";
+@secondaryFontName: "Antonio";
+@googleFontSizes: '400';
+@googleSecondaryFontSizes: '700';
+@headingsFont: @secondaryFontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontRequest: '@{secondaryFontName}:@{googleSecondaryFontSizes}';
+
+@normal: 400;
+@medium: 400;
+@bold: 700;
+
+/*-------------------
+      Site Colors
+--------------------*/
+@black: #000000;
+@gray: #434242;
+@darkgray: #434242;
+@lightgray: #cccccc;
+
+/*-------------------
+      Base Sizes
+--------------------*/
+@emSize: 16px;
+@fontSize: 16px;
+@uiHeaderSize: 1.28571429em;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+@mobileBreakpoint: 320px;
+@tabletBreakpoin: 768px;
+@computerBreakpoint: 992px;
+@largeMonitorBreakpoint: 1200px;
+@widescreenMonitorBreakpoint: 1920px;
+
+/*-------------------
+    Derived Values
+--------------------*/
+@headerTopMargin: 60px;
+@headerTopMarginMobile: 50px;
+@headerBottomMargin: 20px;
+@headerMargin: @headerTopMargin 0em @headerBottomMargin;
+@headingsMarginMobile: @headerTopMarginMobile 0em @headerBottomMargin;
+
+@largestMobileScreen: (@tabletBreakpoint - 1px);
+@largestTabletScreen: (@computerBreakpoint - 1px);
+@largestSmallMonitor: (@largeMonitorBreakpoint - 1px);
+@largestLargeMonitor: (@widescreenMonitorBreakpoint - 1px);
+
+
+/*-------------------
+      Body text
+--------------------*/
+@textSize: 18px;
+@textLineHeight: 1.56;
+@textLetterSpacing: 0.02em;
+@htmlBlockMarginBottom: 0px;
+@contentDisplayTitleDescription: none;
+@textSizeMobile: 16px;
+@textLineHeightMobile: 1.625;
+@containerMaxSize: 707px;
+
+/*-------------------
+      Paragraph
+--------------------*/
+@paragraphMargin: 0em 0em 1em;
+
+
+
+/*-------------------
+    Brand Colors
+--------------------*/
+@primaryColor: @black;
+@secondaryColor: @gray;
+
+/*-------------------
+        Page
+--------------------*/
+@textColor: @gray;
+@contentCoreMarginTop: 0px;
+@contentCoreMarginTopMobile: 0px;
+
+/*--------------
+  Page Heading
+---------------*/
+@headingsFontColor: @black;
+@headingsFontWeight: @bold;
+@headingsLineHeight: 1.125;
+@headingsTextTransform: uppercase;
+@headingsLetterSpacing: -0.02em;
+@h2: 80px;
+@h3: 60px;
+@h4: 40px;
+@h5: 30px;
+@h6: 20px;
+
+@h2Mobile: 60px;
+@h3Mobile: 60px;
+@h4Mobile: 30px;
+@h5Mobile: 25px;
+
+
+/*-------------------
+       Links
+--------------------*/
+@linkColor: @primaryColor;
+@linkUnderline: none;
+@linkHoverColor: @primaryColor;
+@linkBorderBottomSize: 1px;
+@linkHoverBorderBottomSize: 0px;
+@linkBorderBottom: @linkBorderBottomSize solid @lightgray;
+@linkHoverBorderBottom: @linkHoverBorderBottomSize solid @lightgray;
+@linkHoverUnderline: underline;
+
+/*-------------------
+      Blockquote
+--------------------*/
+@blockquoteColor: @darkgray;
+@blockquoteMargin: 0 auto;
+@blockquoteFontWeight: @normal;
+@blockquoteFontSize: 30px;
+@blockquoteWidth: auto;
+@blockquoteBackground: none;
+@blockquoteLineHeight: 45px;
+@blockquoteBorderLeft: 2px solid @lightgray;
+@blockquotePaddingLeft: 20px;
+@blockquotePaddingRight: 20px;
+@blockquotePaddingTop: 0px;
+@blockquotePaddingBottom: 5px;
+@blockquoteMarginBottom: 28px;
+@blockquoteFloat: none;
+@blockquoteLetterSpacing: 0.05em;
+
+/*-------------------
+      Lead image
+--------------------*/
+@fullWidthImgRight: 0;
+@fullWidthImgLeft: 50%;
+@fullWidthImgTransform: translateX(-50%);
+@fullWidthImgWidth: 80vw;
+@fullWidthImgMarginLeft: 0px;
+@fullWidthImgMarginRight: 0px;
+@fullWidthImgMaxWidth: 960px;
+
+@editFullWidthImgRight: 0;
+@editFullWidthImgLeft: 0;
+@editFullWidthImgWidth: 100vw;
+@editFullWidthImgMarginLeft: 0px;
+@editFullWidthImgMarginRight: 0px;
+@editFullWidthImgMaxWidth: 960px;
+
+/*-------------------
+      Carousel
+--------------------*/
+@slideOverlayOpacity: 0;
+@sliderArrowBottom: 15px;
+@sliderArrowLeft: 15px;
+@sliderHeightMobile: 450px;

@@ -1,0 +1,75 @@
+/*******************************
+      INTK Theme Variables
+*******************************/
+
+
+/*-------------------
+    Header
+--------------------*/
+@headerBackgroundColor: #ffffff;
+@headerPaddingTop: 0px;
+@headerPaddingBottom: 0px;
+@headerPaddingLeft: 0px;
+@headerPaddingRight: 0px;
+@headerMarginBottom: 0px;
+@headerMarginBottomMobile: 0px;
+@displayBreadcrumps: none;
+
+/*-------------------
+    Logo
+--------------------*/
+@logoWidth: 389px;
+@logoWidthMobile: 288px;
+
+/*-------------------
+    Logo nav
+--------------------*/
+@logoNavWidth: 100%;
+@logoNavFlexGrow: 1;
+@logoNavMarginBottom: 15px;
+
+/*-------------------
+    Title
+--------------------*/
+@titleNavDisplay: flex;
+@titleNavFlexGrow: 1;
+@titleNavFlexWrap: wrap;
+@titleNavWidth: 100%;
+@titleNavMarginLeft: 0px;
+@titleNavMarginRight: 0px;
+
+@titleNavPaddingTop: 60px;
+@titleNavPaddingTopMobile: 100px;
+@titleNavTextAlign: center;
+@titleNavTextAlignMobile: center;
+
+@titleNavH1FontSize: 60px;
+@titleNavH1FontWeight: @normal;
+@titleNavH1LetterSpacing: -0.02em;
+@titleNavH1TextAlign: center;
+@titleNavH1MarginBottom: 9px;
+@titleNavH1PaddingBottom: 0px;
+@titleNavH1MarginTop: 5px;
+@titleNavH1BorderBottom: 0px solid transparent;
+@titleNavH1Width: 100%;
+@titleNavH1LineHeight: 1.17;
+@titleNavH1BeforeDisplay: none;
+
+@titleNavH1FontSizeMobile: 40px;
+
+/*-------------------
+    Description
+--------------------*/
+@descriptionNavFontWeight: @normal;
+@descriptionNavFontSize: 20px;
+@descriptionNavColor: @gray;
+@descriptionNavMarginBottom: 9px;
+@descriptionNavMarginTop: 9px;
+@descriptionNavWidth: 100%;
+@descriptionNavTextAlign: center;
+@descriptionNavTextAlignMobile: center;
+
+
+/*-------------------
+    Menu
+--------------------*/
