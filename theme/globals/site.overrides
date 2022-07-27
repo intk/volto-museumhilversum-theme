@@ -198,6 +198,7 @@ body:not(.is-authenticated) {
 
     .columns-view .button-block {
         padding-bottom: 5px;
+        z-index: 1;
 
         a {
             padding-left: 50px;

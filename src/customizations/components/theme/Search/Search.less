@@ -1,0 +1,128 @@
+.section-search #page-search {
+
+    -webkit-font-smoothing: antialiased;
+    padding-top: 100px;
+
+    @media(min-width: 992px) {
+        max-width: 930px !important;
+        margin-bottom: 80px;
+    }
+
+    .documentFirstHeading:before {
+        border-bottom: 3px solid #000000;
+        display: none;
+    }
+
+    .documentFirstHeading {
+        display: none;
+    }
+
+    .page-search-widget {
+        margin-bottom: 20px;
+    }
+
+    .items_total {
+        display: block;
+        color: #706F6F;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.05em;
+
+
+        .ui.header {
+            margin-top: 55px;
+        }
+
+        .header-content {
+            display: inline-block;
+        }
+
+        .button-sort,
+        .button-active,
+        .sort-by {
+            font-size: 16px;
+            line-height: 1.88;
+            color: #000000;
+            letter-spacing: 0.05em;
+            margin-top: 15px;
+            margin-left: 0px;
+        }
+
+        .sort-by {
+            margin-right: 25px;
+            display: none;
+        }
+
+        .button-sort,
+        .button-active {
+            font-size: 16px;
+            line-height: 1.88;
+            letter-spacing: 0.1em;
+            color: #000000;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: #e5e5e5;
+            margin-right: 25px;
+            text-transform: uppercase;
+
+            &:before {
+                display: none;
+            }
+
+            &:hover,
+            &:focus,
+            &:active:focus {
+                background-color: #000000;
+                color: #ffffff;
+            }
+        }
+
+        .button-active {
+            background-color: #000000;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        margin-bottom: 40px;
+
+        @media(min-width: 992px) {
+            margin-bottom: 100px;
+        }
+    }
+
+    #content-core {
+
+        .tileItem {
+            padding-top: 35px;
+            padding-bottom: 0px;
+            margin-bottom: 35px;
+            border-top: 2px solid #000000;
+
+            &:last-child {
+                border-bottom: 2px solid #000000;
+                padding-bottom: 35px;
+            }
+
+            .tileHeadline {
+                font-size: 24px;
+                line-height: 1.25;
+                font-weight: bold;
+            }
+
+            span.description {
+                font-size: 18px;
+                line-height: 1.56;
+                letter-spacing: 0.02em;
+                color: #706F6F;
+            }
+
+            .tileFooter {
+                margin-top: 10px;
+                display: none;
+            }
+        }
+    }
+}

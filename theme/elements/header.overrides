@@ -2,6 +2,74 @@
       INTK Theme Overrides
 *******************************/
 
+
+.searchBox() {
+    .searchbox {
+        padding-left: 0px;
+        border-left: 0px;
+        position: relative;
+    }
+
+    button {
+        color: #C4C4C4;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding-left: 7px;
+        padding-right: 5px;
+        transform: translateY(-50%);
+        z-index: 3;
+
+        svg {
+            height: 100% !important;
+            width: 49px !important;
+        }
+
+        @media(max-width: @largestTabletScreen) {
+            padding-left: 10px;
+            padding-right: 5px;
+
+            svg {
+                width: 43px !important;
+            }
+        }
+    }
+    
+    input {
+        width: 100%;
+        border: 2px solid #C4C4C4 !important;
+        height: 80px;
+        font-family: 'Antonio', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        line-height: 1.09;
+        font-size: 55px;
+        padding-left: 63px !important;
+        padding-right: 15px !important;
+        padding-bottom: 15px !important;
+        padding-top: 5px !important;
+        color: #C4C4C4;
+
+        &::-webkit-input-placeholder { /* Edge */
+            color: #C4C4C4;
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #C4C4C4;
+        }
+        
+        &::placeholder {
+            color: #C4C4C4;
+        }
+
+        @media(max-width: @largestTabletScreen) {
+            font-size: 45px;
+            line-height: 1.33;
+        }
+    }
+}
+
 div[role="navigation"].breadcrumbs {
     display: @displayBreadcrumps;
 }
@@ -464,72 +532,7 @@ body.has-toolbar-collapsed {
                     padding-bottom: 15px;
                 }
 
-                .searchbox {
-                    padding-left: 0px;
-                    border-left: 0px;
-                    position: relative;
-                }
-
-                button {
-                    color: #C4C4C4;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    padding-left: 7px;
-                    padding-right: 5px;
-                    transform: translateY(-50%);
-                    z-index: 3;
-
-                    svg {
-                        height: 100% !important;
-                        width: 49px !important;
-                    }
-
-                    @media(max-width: @largestTabletScreen) {
-                        padding-left: 10px;
-                        padding-right: 5px;
-
-                        svg {
-                            width: 43px !important;
-                        }
-                    }
-                }
-                
-                input {
-                    width: 100%;
-                    border: 2px solid #C4C4C4 !important;
-                    height: 80px;
-                    font-family: 'Antonio', "Helvetica Neue", Helvetica, Arial, sans-serif;
-                    font-weight: 700;
-                    letter-spacing: -0.02em;
-                    text-transform: uppercase;
-                    line-height: 1.09;
-                    font-size: 55px;
-                    padding-left: 63px !important;
-                    padding-right: 15px !important;
-                    padding-bottom: 15px !important;
-                    padding-top: 5px !important;
-                    color: #C4C4C4;
-
-                    &::-webkit-input-placeholder { /* Edge */
-                        color: #C4C4C4;
-                    }
-                    
-                    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                        color: #C4C4C4;
-                    }
-                    
-                    &::placeholder {
-                        color: #C4C4C4;
-                    }
-
-                    @media(max-width: @largestTabletScreen) {
-                        font-size: 45px;
-                        line-height: 1.33;
-                    }
-                }
-
-                
+                .searchBox();
             }
 
             .ui.dropdown {
@@ -853,6 +856,16 @@ div.header-wrapper .item-language-selector {
 }
 
 /*-------------------
+    Search Header 
+--------------------*/
+#page-search {
+    .page-search-widget {
+        .searchBox();
+    }
+}
+
+
+/*-------------------
     Mobile queries
 --------------------*/
 @media(max-width: 991px) {
@@ -894,3 +907,4 @@ div.header-wrapper .item-language-selector {
         }
     }
 }
+

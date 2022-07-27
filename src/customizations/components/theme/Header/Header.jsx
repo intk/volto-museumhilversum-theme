@@ -71,19 +71,36 @@ class Header extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
+    var contentBlockFieldsName = null;
+    var contentLayout = null;
+
     const content = this.props.content;
     const preview_image = content?.preview_image;
     const is_event = (content && content['@type'] === 'Event') || false;
     const blocksFieldname = getBlocksFieldname(content);
     const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
-    const headerItems = content[blocksLayoutFieldname]?.items;
+
+    if (blocksFieldname && blocksFieldname in content) {
+      contentBlockFieldsName = content[blocksFieldname];
+    } else {
+      contentBlockFieldsName = null;
+    }
+
+    if (blocksLayoutFieldname && blocksLayoutFieldname in content) {
+      contentLayout = content[blocksLayoutFieldname];
+    } else {
+      contentLayout = null;
+    }
+
+    const headerItems = contentLayout?.items;
+
     const renderHeaderBlock =
       (headerItems &&
+        contentBlockFieldsName &&
         headerItems.length > 0 &&
-        content[blocksFieldname]?.[headerItems[0]]?.['@type'] ===
-          'imagecards') ||
-      (content[blocksFieldname]?.[headerItems[0]]?.['@type'] === 'listing' &&
-        content[blocksFieldname]?.[headerItems[0]]?.['variation'] ===
+        contentBlockFieldsName?.[headerItems[0]]?.['@type'] === 'imagecards') ||
+      (contentBlockFieldsName?.[headerItems[0]]?.['@type'] === 'listing' &&
+        contentBlockFieldsName?.[headerItems[0]]?.['variation'] ===
           'slider_header') ||
       false;
 
@@ -94,7 +111,7 @@ class Header extends Component {
       headerBlockID = headerItems[0];
       Block =
         config.blocks.blocksConfig[
-          content[blocksFieldname]?.[headerBlockID]?.['@type']
+          contentBlockFieldsName?.[headerBlockID]?.['@type']
         ]?.['view'] || null;
     }
 
