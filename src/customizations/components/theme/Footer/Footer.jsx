@@ -15,6 +15,7 @@ import { Logo } from '@plone/volto/components';
 import SponsorImage from './NLSponsor.svg';
 import ArrowUpImage from './ArrowUp.svg';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
 
 const messages = defineMessages({
   copyright: {
@@ -22,6 +23,25 @@ const messages = defineMessages({
     defaultMessage: 'Copyright',
   },
 });
+
+const cookietranslations = {
+  more_info_link: {
+    en: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
+    nl: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
+  },
+  more_info_text: {
+    en: 'Read more',
+    nl: 'Meer info',
+  },
+  text: {
+    en: 'We use cookies to enhance our website.',
+    nl: 'Wij gebruiken cookies om onze website te verbeteren.',
+  },
+  button_text: {
+    en: 'Accept',
+    nl: 'Accepteren',
+  },
+};
 
 const MailChimpForm = ({ status, message, onValidated }) => {
   let email, name;
@@ -197,11 +217,25 @@ const Footer = ({ intl }) => {
                 speciale pas waarmee je gratis toegang hebt tot alle
                 tentoonstellingen van Museum Hilversum.
               </p>
-              <Link to="/nl/over/vrienden">Aanmelden als vriend</Link>
+              <Link to="/nl/over-ons/vrienden">Aanmelden als vriend</Link>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
+      <CookieConsent
+        style={{ background: '#000000' }}
+        buttonStyle={{
+          color: '#ffffff',
+          fontSize: '13px',
+          background: '#000000',
+        }}
+        buttonText={cookietranslations['button_text'][lang]}
+      >
+        {cookietranslations['text'][lang]}{' '}
+        <Link to="/nl/over-ons/over-het-museum/privacyverklaring-en-cookies">
+          {cookietranslations['more_info_text'][lang]}
+        </Link>
+      </CookieConsent>
     </>
   );
 };

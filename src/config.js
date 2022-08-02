@@ -15,6 +15,7 @@ import {
   WebslidesView,
   WebslidesBlocksView,
 } from './components';
+import CookieBanner from 'volto-cookie-banner/CookieBannerContainer';
 
 export default function applyConfig(config) {
   config.settings = {
@@ -24,6 +25,13 @@ export default function applyConfig(config) {
     supportedLanguages: ['en', 'nl'],
     defaultLanguage: 'nl',
     navDepth: 2,
+    appExtras: [
+      ...config.settings.appExtras,
+      {
+        match: '*',
+        component: CookieBanner,
+      },
+    ],
   };
 
   config.blocks.blocksConfig.listing.variations = [

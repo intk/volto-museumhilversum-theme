@@ -21,7 +21,7 @@ import StructuredData from './theme/StructuredData/StructuredData';
 
 const useTagManager = () => {
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-MKPZ3JS' });
+    TagManager.initialize({ gtmId: 'GTM-WMPQHQW' });
   }, []);
 };
 

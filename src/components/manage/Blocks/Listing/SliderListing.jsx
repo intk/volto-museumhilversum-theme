@@ -6,6 +6,11 @@ import loadable from '@loadable/component';
 import ResponsiveContainer from '@eeacms/volto-block-image-cards/ImageCards/ResponsiveContainer';
 import { Link } from 'react-router-dom';
 
+import {
+  When,
+  Recurrence,
+} from '@plone/volto/components/theme/View/EventDatesInfo';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './SliderListing.less';
@@ -79,6 +84,29 @@ const SliderListing = ({ items, linkTitle, linkHref, isEditMode }) => {
                                     {item.title}
                                   </Link>
                                 </h2>
+
+                                <div className="slide-below-title">
+                                  {['Event'].includes(item['@type']) ? (
+                                    <When
+                                      start={item.start}
+                                      end={item.end}
+                                      whole_day={true}
+                                      open_end={false}
+                                    />
+                                  ) : (
+                                    ''
+                                  )}
+                                  {['News Item'].includes(item['@type']) ? (
+                                    <When
+                                      start={item.EffectiveDate}
+                                      end={item.EffectiveDate}
+                                      whole_day={true}
+                                      open_end={false}
+                                    />
+                                  ) : (
+                                    ''
+                                  )}
+                                </div>
                               </div>
                             </div>
                           </div>

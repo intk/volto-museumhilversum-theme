@@ -17,6 +17,21 @@ import {
 
 const Slider = loadable(() => import('react-slick'));
 
+const getDateLabel = (start, end) => {
+  const today = new Date();
+  const start_date = new Date(start);
+  const end_date = new Date(end);
+  today.setHours(0, 0, 0, 0);
+
+  if (start_date > today) {
+    return 'Verwacht';
+  } else if (end_date < today) {
+    return 'Geweest';
+  } else {
+    return 'Nu te zien';
+  }
+};
+
 const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
   const carouselSettings = {
     dots: false,
@@ -61,7 +76,7 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                       <div className="dates">
                                         <div className="label-wrapper">
                                           <Label color="black">
-                                            Nu te zien
+                                            {getDateLabel(item.start, item.end)}
                                           </Label>
                                         </div>
                                         <When

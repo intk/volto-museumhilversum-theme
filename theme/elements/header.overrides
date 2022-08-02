@@ -258,6 +258,7 @@ body.contenttype-lrf {
         max-width: 100% !important;
         margin: 0px !important;
         height: 44vw;
+        margin-top: 58px !important;
 
         .header-image-wrapper {
             height: 100%;

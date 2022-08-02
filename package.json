@@ -42,7 +42,8 @@
     "@eeacms/volto-block-image-cards",
     "@eeacms/volto-columns-block",
     "@kitconcept/volto-blocks-grid",
-    "volto-form-block"
+    "volto-form-block",
+    "volto-cookie-banner"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -154,6 +155,7 @@
     "@plone/volto": "14.2.2",
     "react-gtm-module": "2.0.11",
     "react-mailchimp-subscribe": "2.1.3",
+    "volto-cookie-banner": "2.1.0",
     "volto-form-block": "2.3.0",
     "webslides": "https://github.com/webslides/webslides"
   },

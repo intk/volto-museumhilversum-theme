@@ -621,6 +621,121 @@ body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed):not(.section-cont
       Footer
 --------------------*/
 
+
+.cookieConsent {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    a {
+        font-size: 12px;
+        text-decoration: underline;
+        margin-left: 10px !important;
+
+        &:hover,
+        &:focus,
+        &:active:focus {
+            text-decoration: none;
+        }
+    }
+
+    button {
+        background: #000000 !important;
+        border: 2px solid #ffffff !important;
+        color: #ffffff !important;
+
+        &:hover,
+        &:focus,
+        &:active:focus {
+            background: #ffffff !important;
+            border: 2px solid #ffffff !important;
+            color: #000000 !important;
+        }
+    }
+}
+
+#cookie-banner {
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 1.5em;
+    z-index: 200;
+    padding: 1em;
+    padding-right: 2em;
+    background-color: #000000;
+    width: 100%;
+    box-sizing: border-box;
+
+    
+
+    bottom: 20px;
+    width: 90%;
+    background-color: #000000;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    &> div {
+        float: left;
+    }
+
+    p {
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 24px;
+        line-height: 62px;
+
+        @media(max-width: 991px) {
+            font-size: 19px;
+            line-height: 1.68;
+        }
+    }
+
+    .btn {
+        font-size: 25px;
+        height: 63px;
+        line-height: 44px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        position: relative;
+        float: right;
+        background-color: #000000;
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration: none;
+        padding: 7px 17px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active:focus {
+            background-color: #ffffff;
+            border: 2px solid #ffffff;
+            color: #000000;
+        }
+
+        @media(max-width: 991px) {
+            float: left;
+            display: block;
+            clear: both;
+            margin-left: 13px;
+            font-size: 20px;
+            height: 45px;
+            line-height: 30px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
 #footer {
     font-weight: @normal;
     -webkit-font-smoothing: @bodyFontSmoothing;

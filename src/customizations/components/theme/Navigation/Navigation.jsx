@@ -154,11 +154,9 @@ class Navigation extends Component {
    */
   closeMobileMenu() {
     if (!this.state.isMobileMenuOpen) {
-      console.log('do not close it');
       return;
     }
     this.setState({ isMobileMenuOpen: false }, () => {
-      console.log('close it');
       document.removeEventListener('mousedown', this.handleClickOutsideNav);
     });
   }

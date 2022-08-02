@@ -16,6 +16,7 @@ import {
 import { LeadVideo } from '@package/components';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import {
   When,
@@ -31,6 +32,21 @@ import {
 } from '@plone/volto/helpers';
 
 import config from '@plone/volto/registry';
+
+const getDateLabel = (start, end) => {
+  const today = new Date();
+  const start_date = new Date(start);
+  const end_date = new Date(end);
+  today.setHours(0, 0, 0, 0);
+
+  if (start_date > today) {
+    return 'Verwacht';
+  } else if (end_date < today) {
+    return 'Geweest';
+  } else {
+    return 'Nu te zien';
+  }
+};
 
 /**
  * Header component class.
@@ -75,10 +91,15 @@ class Header extends Component {
     var contentLayout = null;
 
     const content = this.props.content;
-    const preview_image = content?.preview_image;
+    var preview_image = content?.preview_image;
     const is_event = (content && content['@type'] === 'Event') || false;
+    const is_news_item = (content && content['@type'] === 'News Item') || false;
     const blocksFieldname = getBlocksFieldname(content);
     const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
+
+    if (!preview_image) {
+      preview_image = content?.image;
+    }
 
     if (blocksFieldname && blocksFieldname in content) {
       contentBlockFieldsName = content[blocksFieldname];
@@ -195,7 +216,9 @@ class Header extends Component {
                 <div className="title-nav-wrapper">
                   {is_event && (
                     <div className="label-wrapper">
-                      <Label color="black">Nu te zien</Label>
+                      <Label color="black">
+                        {getDateLabel(content.start, content.end)}
+                      </Label>
                     </div>
                   )}
                   <Title title={content?.title} />
@@ -209,6 +232,16 @@ class Header extends Component {
                         end={content.end}
                         whole_day={content.whole_day}
                         open_end={content.open_end}
+                      />
+                    </>
+                  )}
+                  {is_news_item && content?.effective && (
+                    <>
+                      <When
+                        start={content.effective}
+                        end={content.effective}
+                        whole_day={true}
+                        open_end={false}
                       />
                     </>
                   )}

@@ -13203,6 +13203,11 @@ jquery@x.*:
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
 
+js-cookie@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
+
 js-string-escape@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/js-string-escape/-/js-string-escape-1.0.1.tgz#e2625badbc0d67c7533e9edc1068c587ae4137ef"
@@ -17313,6 +17318,13 @@ react-colorful@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.1.tgz#29d9c4e496f2ca784dd2bb5053a3a4340cfaf784"
   integrity sha512-M1TJH2X3RXEt12sWkpa6hLc/bbYS0H6F4rIqjQZ+RxNBstpY67d9TrFXtqdZwhpmBXcCwEi7stKqFue3ZRkiOg==
 
+react-cookie-consent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-3.0.0.tgz#4780f142326c301c06957a94f885dd70d3c566f5"
+  integrity sha512-H9vD+vUENkOSjh8ZsGG9Pgb30K58ys/roHNOTRFafTJvoC9NEeHO8XC//z54k+ZbVbsqcYe4Tiv7EYfFSq2y7Q==
+  dependencies:
+    js-cookie "^2.2.0"
+
 react-cookie@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-1.0.5.tgz#234190bd55ddfea361444a89c873077ab6abf651"
@@ -21290,6 +21302,14 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+volto-cookie-banner@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/volto-cookie-banner/-/volto-cookie-banner-2.1.0.tgz#da7fd184146260cf04f489fa7f8b387533fb0b13"
+  integrity sha512-PsMQTz+yxYgLf/1RGiIho5KEw+4nXAsy7hymPNaAEzgBNtrPE8UygK44WtDSiqgdrMmzxW3FRWuGcSWiiUf+fg==
+  dependencies:
+    "@plone/scripts" "^1.0.3"
+    react-cookie-consent "^3.0.0"
+
 volto-form-block@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/volto-form-block/-/volto-form-block-2.3.0.tgz#b042f22d4f876d2ca6da6d8db9a555c5e602c3bc"
@@ -21319,7 +21339,7 @@ volto-slate@*:
     slate-react "^0.71.0"
     weak-key "^1.0.2"
 
-"volto-subblocks@github:collective/volto-subblocks#v1.0.1":
+volto-subblocks@collective/volto-subblocks#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
   dependencies:

@@ -502,3 +502,9 @@ body.contenttype-event {
         }
     }
 }
+
+body.view-controlpanelview {
+    h3.ui.header {
+        font-size: 16px !important;
+    }
+}
