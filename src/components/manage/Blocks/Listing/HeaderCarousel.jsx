@@ -104,7 +104,7 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                   </div>
                                   <div className="opening-times">
                                     <Image src={clockSVG}></Image>
-                                    <p>Open Di t/m Zo 11:00—16:30</p>
+                                    <p>Dagelijks open van 11 tot 17 uur.</p>
                                   </div>
                                 </div>
                               </div>
