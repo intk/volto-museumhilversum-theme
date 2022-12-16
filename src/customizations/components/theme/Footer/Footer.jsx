@@ -125,7 +125,6 @@ const Footer = ({ intl }) => {
               <h4>Openingstijden</h4>
               <p>
                 Dagelijks open van 11 tot 17 uur.
-                <br></br>18 maart gesloten.
               </p>
               <Link to="/nl/bezoek">Plan je bezoek</Link>
             </Grid.Column>

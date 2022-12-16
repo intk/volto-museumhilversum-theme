@@ -117,7 +117,7 @@ const EventView = ({ intl, content }) => {
           {intl.formatMessage(messages.opening_times)}
         </Header>
         <p className="opening-times">
-          Di t/m Zo: 11:00 – 16:30<br></br>Maandag gesloten
+          Dagelijks open van 11 tot 17 uur.
         </p>
 
         <div className="visit-wrapper">
