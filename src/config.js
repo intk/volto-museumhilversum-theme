@@ -23,7 +23,7 @@ export default function applyConfig(config) {
     devProxyToApiPath: 'http://localhost:11080/museumhilversum',
     isMultilingual: true,
     supportedLanguages: ['en', 'nl'],
-    defaultLanguage: 'nl',
+    defaultLanguage: 'en',
     navDepth: 2,
     appExtras: [
       ...config.settings.appExtras,

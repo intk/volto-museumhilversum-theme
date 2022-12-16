@@ -18,7 +18,7 @@ const View = ({ data }) => (
   <div className="block hero">
     <div className="block-inner-wrapper">
       <div className="image-wrapper">
-        {data.url && data.linkHref && (
+        {data.url && data.linkHref && data.linkHref[0] && (
           <Link to={flattenToAppURL(data.linkHref[0]['@id'])}>
             <img
               src={`${flattenToAppURL(data.url)}/@@images/image`}
