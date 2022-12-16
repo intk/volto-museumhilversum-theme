@@ -129,13 +129,13 @@ const Footer = ({ intl }) => {
               <Link to="/nl/bezoek">Plan je bezoek</Link>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Contacts</h4>
+              <h4>Contact</h4>
               <p>
                 info@museumhilversum.nl<br></br>035 – 5339601
               </p>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Blijf of the hoogte</h4>
+              <h4>Blijf op de hoogte</h4>
               <MailchimpSubscribe
                 url={mailchimp_url}
                 render={({ subscribe, status, message }) => (
@@ -185,10 +185,6 @@ const Footer = ({ intl }) => {
               <a href="https://www.google.com/maps?f=d&source=s_d&saddr&daddr=Kerkbrink+6,+1211+BX+Hilversum,+Netherlands+(Museum+Hilversum)&hl=en&geocode=CVXkfbhilC3CFTjgHAMd_OhOACGF6UW5JFoajg&sll=52.240205,5.146065&sspn=0.083358,0.224018&vpsrc=6&mra=ls&ie=UTF8&ll=52.240205,5.146065&spn=0.083358,0.224018&z=13&iwloc=A">
                 Route
               </a>
-            </Grid.Column>
-            <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Sponsors</h4>
-              <Image src={SponsorImage} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
