@@ -99,7 +99,7 @@ const Footer = ({ intl }) => {
   const { settings } = config;
   const lang = useSelector((state) => state.intl.locale);
   const mailchimp_url =
-    '//intk.us5.list-manage.com/subscribe/post?u=234bf50c3263f36ded910b409&amp;id=604ba512c5';
+    '//museumhilversum.us7.list-manage.com/subscribe/post?u=98bfbab9f660b60bd2935184c&amp;id=d7b1a103be';
 
   return (
     <>
