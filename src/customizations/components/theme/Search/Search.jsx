@@ -181,7 +181,7 @@ class Search extends Component {
                   {this.props.search.items_total}{' '}
                   <FormattedMessage
                     id="results found"
-                    defaultMessage="results"
+                    defaultMessage="resultaten"
                   />
                   <Header>
                     <Header.Content className="header-content">
@@ -203,7 +203,7 @@ class Search extends Component {
                       >
                         <FormattedMessage
                           id="Relevance"
-                          defaultMessage="Relevance"
+                          defaultMessage="Relevantie"
                         />
                       </Button>
                       <Button
@@ -219,7 +219,7 @@ class Search extends Component {
                       >
                         <FormattedMessage
                           id="Alphabetically"
-                          defaultMessage="Alphabetically"
+                          defaultMessage="Alfabetisch"
                         />
                       </Button>
                       <Button
@@ -234,7 +234,7 @@ class Search extends Component {
                       >
                         <FormattedMessage
                           id="Date (newest first)"
-                          defaultMessage="Date (newest first)"
+                          defaultMessage="Datum (nieuwste eerst)"
                         />
                       </Button>
                     </Header.Content>
@@ -244,7 +244,7 @@ class Search extends Component {
                 <div>
                   <FormattedMessage
                     id="No results found"
-                    defaultMessage="No results found"
+                    defaultMessage="Geen resultaten gevonden"
                   />
                 </div>
               )}
