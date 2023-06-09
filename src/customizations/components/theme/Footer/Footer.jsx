@@ -123,15 +123,16 @@ const Footer = ({ intl }) => {
           <Grid.Row>
             <Grid.Column mobile={12} tablet={6} computer={4}>
               <h4>Openingstijden</h4>
-              <p>
-                Dagelijks open van 11 tot 17 uur.
-              </p>
+              <p>Dagelijks open van 11 tot 17 uur.</p>
               <Link to="/nl/bezoek">Plan je bezoek</Link>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
               <h4>Contact</h4>
               <p>
-                info@museumhilversum.nl<br></br>035 – 5339601
+                <a href="mailto:info@museumhilversum.nl">
+                  info@museumhilversum.nl
+                </a>
+                <br></br>035 – 5339601
               </p>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
@@ -175,6 +176,15 @@ const Footer = ({ intl }) => {
                   className="social-media-link"
                 >
                   Facebook
+                </a>
+                <Image className="arrow-up" src={ArrowUpImage} />
+              </h5>
+              <h5>
+                <a
+                  href="https://www.linkedin.com/company/museum-hilversum/"
+                  className="social-media-link"
+                >
+                  Linkedin
                 </a>
                 <Image className="arrow-up" src={ArrowUpImage} />
               </h5>
