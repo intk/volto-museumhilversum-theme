@@ -41,9 +41,52 @@ const cookietranslations = {
     en: 'Accept',
     nl: 'Accepteren',
   },
+  openinghours: {
+    en: 'Openning Hours',
+    nl: 'Openingstijden',
+  },
+  opendaily: {
+    en: 'Open daily from 11 a.m. to 5 p.m.',
+    nl: 'Dagelijks open van 11 tot 17 uur.',
+  },
+  planyourvisit: {
+    en: 'Plan your visit',
+    nl: 'Plan je bezoek',
+  },
+  stayinformed: {
+    en: 'Stay informed',
+    nl: 'Blijf op de hoogte',
+  },
+  subscribe: {
+    en: 'Subscribe',
+    nl: 'Inschrijven',
+  },
+  location: {
+    en: 'Location',
+    nl: 'Locatie',
+  },
+  route: {
+    en: 'Route',
+    nl: 'Route',
+  },
+  becomeafriend: {
+    en: 'Become a friend',
+    nl: 'Word een vriend',
+  },
+  youcanbecome: {
+    en:
+      'You can become a Museum Friend for only 30 euros per year. With this you not only support Museum Hilversum, but you also receive a special pass that gives you free access to all exhibitions of Museum Hilversum.',
+    nl:
+      'Voor slechts 30 euro per jaar ben je al Museumvriend. Daarmee steun je niet alleen Museum Hilversum maar krijg je ook een speciale pas waarmee je gratis toegang hebt tot alle.',
+  },
+  signup: {
+    en: 'Sign up as a friend',
+    nl: 'Aanmelden als vriend',
+  },
 };
 
 const MailChimpForm = ({ status, message, onValidated }) => {
+  const lang = useSelector((state) => state.intl.locale);
   let email, name;
   const submit = () =>
     email &&
@@ -82,7 +125,7 @@ const MailChimpForm = ({ status, message, onValidated }) => {
         placeholder="Emailadres"
       />
       <br />
-      <button onClick={submit}>Inschrijven</button>
+      <button onClick={submit}>{cookietranslations['subscribe'][lang]}</button>
     </div>
   );
 };
@@ -122,9 +165,11 @@ const Footer = ({ intl }) => {
         <Grid container stackable className="footer-items-container">
           <Grid.Row>
             <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Openingstijden</h4>
-              <p>Dagelijks open van 11 tot 17 uur.</p>
-              <Link to="/nl/bezoek">Plan je bezoek</Link>
+              <h4>{cookietranslations['openinghours'][lang]}</h4>
+              <p>{cookietranslations['opendaily'][lang]}</p>
+              <Link to="/nl/bezoek">
+                {cookietranslations['planyourvisit'][lang]}
+              </Link>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
               <h4>Contact</h4>
@@ -136,7 +181,7 @@ const Footer = ({ intl }) => {
               </p>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Blijf op de hoogte</h4>
+              <h4>{cookietranslations['stayinformed'][lang]}</h4>
               <MailchimpSubscribe
                 url={mailchimp_url}
                 render={({ subscribe, status, message }) => (
@@ -190,10 +235,10 @@ const Footer = ({ intl }) => {
               </h5>
             </Grid.Column>
             <Grid.Column mobile={12} tablet={6} computer={4}>
-              <h4>Locatie</h4>
+              <h4>{cookietranslations['location'][lang]}</h4>
               <p>Kerkbrink 6, 1211 BX Hilversum</p>
               <a href="https://www.google.com/maps?f=d&source=s_d&saddr&daddr=Kerkbrink+6,+1211+BX+Hilversum,+Netherlands+(Museum+Hilversum)&hl=en&geocode=CVXkfbhilC3CFTjgHAMd_OhOACGF6UW5JFoajg&sll=52.240205,5.146065&sspn=0.083358,0.224018&vpsrc=6&mra=ls&ie=UTF8&ll=52.240205,5.146065&spn=0.083358,0.224018&z=13&iwloc=A">
-                Route
+                {cookietranslations['openinghours'][lang]}
               </a>
             </Grid.Column>
           </Grid.Row>
@@ -215,14 +260,11 @@ const Footer = ({ intl }) => {
         >
           <Grid.Row>
             <Grid.Column className="footer-support">
-              <h2>Word een vriend</h2>
-              <p>
-                Voor slechts 30 euro per jaar ben je al Museumvriend. Daarmee
-                steun je niet alleen Museum Hilversum maar krijg je ook een
-                speciale pas waarmee je gratis toegang hebt tot alle
-                tentoonstellingen van Museum Hilversum.
-              </p>
-              <Link to="/nl/over-ons/vrienden">Aanmelden als vriend</Link>
+              <h2>{cookietranslations['becomeafriend'][lang]}</h2>
+              <p>{cookietranslations['youcanbecome'][lang]}</p>
+              <Link to="/nl/over-ons/vrienden">
+                {cookietranslations['signup'][lang]}
+              </Link>
             </Grid.Column>
           </Grid.Row>
         </Grid>
