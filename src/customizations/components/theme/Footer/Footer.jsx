@@ -26,7 +26,7 @@ const messages = defineMessages({
 
 const cookietranslations = {
   more_info_link: {
-    en: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
+    en: '/en/over-ons/over-het-museum/privacyverklaring-en-cookies',
     nl: '/nl/over-ons/over-het-museum/privacyverklaring-en-cookies',
   },
   more_info_text: {
@@ -167,7 +167,8 @@ const Footer = ({ intl }) => {
             <Grid.Column mobile={12} tablet={6} computer={4}>
               <h4>{cookietranslations['openinghours'][lang]}</h4>
               <p>{cookietranslations['opendaily'][lang]}</p>
-              <Link to="/nl/bezoek">
+              <Link to={`/${lang}/bezoek`}>
+                {' '}
                 {cookietranslations['planyourvisit'][lang]}
               </Link>
             </Grid.Column>
@@ -262,7 +263,8 @@ const Footer = ({ intl }) => {
             <Grid.Column className="footer-support">
               <h2>{cookietranslations['becomeafriend'][lang]}</h2>
               <p>{cookietranslations['youcanbecome'][lang]}</p>
-              <Link to="/nl/over-ons/vrienden">
+              <Link to={`/${lang}/over-ons/vrienden`}>
+                {' '}
                 {cookietranslations['signup'][lang]}
               </Link>
             </Grid.Column>
@@ -279,7 +281,10 @@ const Footer = ({ intl }) => {
         buttonText={cookietranslations['button_text'][lang]}
       >
         {cookietranslations['text'][lang]}{' '}
-        <Link to="/nl/over-ons/over-het-museum/privacyverklaring-en-cookies">
+        <Link
+          to={`/${lang}/over-ons/over-het-museum/privacyverklaring-en-cookies`}
+        >
+          {' '}
           {cookietranslations['more_info_text'][lang]}
         </Link>
       </CookieConsent>
