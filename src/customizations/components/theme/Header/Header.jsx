@@ -31,6 +31,17 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 
+const headertranslations = {
+  visit: {
+    en: 'Plan your visit',
+    nl: 'Plan je bezoek',
+  },
+  visit_link: {
+    en: '/en/visit',
+    nl: 'nl/bezoek',
+  },
+};
+
 import config from '@plone/volto/registry';
 
 const getDateLabel = (start, end) => {
@@ -153,8 +164,11 @@ class Header extends Component {
 
           <Menu.Menu position="right">
             <Menu.Item>
-              <NavLink to="/nl/bezoek" key="/nl/bezoek">
-                Plan je bezoek
+              <NavLink
+                to="/nl/bezoek"
+                key={headertranslations['visit_link'][this.props.lang]}
+              >
+                {headertranslations['visit'][this.props.lang]}
               </NavLink>
             </Menu.Item>
             <Menu.Item className="item-language-selector">
@@ -257,4 +271,5 @@ class Header extends Component {
 export default connect((state) => ({
   token: state.userSession.token,
   content: state.content.data,
+  lang: state.intl.locale,
 }))(Header);
