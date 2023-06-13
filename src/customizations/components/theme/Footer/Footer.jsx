@@ -91,6 +91,10 @@ const cookietranslations = {
     en: 'Sign up as a friend',
     nl: 'Aanmelden als vriend',
   },
+  email: {
+    en: 'EmailAddress',
+    nl: 'Emailadres',
+  },
 };
 
 const MailChimpForm = ({ status, message, onValidated }) => {
@@ -130,7 +134,7 @@ const MailChimpForm = ({ status, message, onValidated }) => {
       <input
         ref={(node) => (email = node)}
         type="email"
-        placeholder="Emailadres"
+        placeholder={cookietranslations['email'][lang]}
       />
       <br />
       <button onClick={submit}>{cookietranslations['subscribe'][lang]}</button>
