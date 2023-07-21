@@ -43,20 +43,19 @@ const carouseltranslations = {
   },
 };
 
-const getDateLabel = (start, end) => {
+const getDateLabel = (start, end, currentLang) => {
   const today = new Date();
   const start_date = new Date(start);
   const end_date = new Date(end);
   today.setHours(0, 0, 0, 0);
 
-  // if (start_date > today) {
-  //   return carouseltranslations['expected'][this.props.lang];
-  // } else if (end_date < today) {
-  //   return carouseltranslations['past'][this.props.lang];
-  // } else {
-  //   return carouseltranslations['nowonview'][this.props.lang];
-  // }
-  return '';
+  if (start_date > today) {
+    return carouseltranslations['expected'][currentLang];
+  } else if (end_date < today) {
+    return carouseltranslations['past'][currentLang];
+  } else {
+    return carouseltranslations['nowonview'][currentLang];
+  }
 };
 
 const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
@@ -105,7 +104,11 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                       <div className="dates">
                                         <div className="label-wrapper">
                                           <Label color="black">
-                                            {getDateLabel(item.start, item.end)}
+                                            {getDateLabel(
+                                              item.start,
+                                              item.end,
+                                              currentLang,
+                                            )}
                                           </Label>
                                         </div>
                                         <When
