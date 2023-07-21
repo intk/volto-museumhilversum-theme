@@ -17,6 +17,29 @@ import {
 
 const Slider = loadable(() => import('react-slick'));
 
+const carouseltranslations = {
+  open_times: {
+    en: 'Daily opened from 11 am until 5 pm.',
+    nl: 'Dagelijks open van 11 tot 17 uur.',
+  },
+  discover: {
+    en: 'Discover more',
+    nl: 'Ontdek meer',
+  },
+  nowonview: {
+    en: 'Now on view',
+    nl: 'Nu te zien',
+  },
+  expected: {
+    en: 'Expected',
+    nl: 'Verwacht',
+  },
+  past: {
+    en: 'Past',
+    nl: 'Geweest',
+  },
+};
+
 const getDateLabel = (start, end) => {
   const today = new Date();
   const start_date = new Date(start);
@@ -24,11 +47,11 @@ const getDateLabel = (start, end) => {
   today.setHours(0, 0, 0, 0);
 
   if (start_date > today) {
-    return 'Verwacht';
+    return carouseltranslations['expected'][this.props.lang];
   } else if (end_date < today) {
-    return 'Geweest';
+    return carouseltranslations['past'][this.props.lang];
   } else {
-    return 'Nu te zien';
+    return carouseltranslations['nowonview'][this.props.lang];
   }
 };
 
@@ -98,13 +121,23 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                     </div>
                                     <div className="more">
                                       <Link to="/nl/tentoonstellingen">
-                                        Ontdek meer
+                                        {
+                                          carouseltranslations['discover'][
+                                            this.props.lang
+                                          ]
+                                        }
                                       </Link>
                                     </div>
                                   </div>
                                   <div className="opening-times">
                                     <Image src={clockSVG}></Image>
-                                    <p>Dagelijks open van 11 tot 17 uur.</p>
+                                    <p>
+                                      {
+                                        carouseltranslations['open_times'][
+                                          this.props.lang
+                                        ]
+                                      }
+                                    </p>
                                   </div>
                                 </div>
                               </div>
