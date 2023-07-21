@@ -130,27 +130,24 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                     </div>
                                     <div className="more">
                                       <Link to="/nl/tentoonstellingen">
-                                        {/* {
+                                        {
                                           carouseltranslations['discover'][
-                                            this.props.lang
+                                            currentLang
                                           ]
-                                        } */}
-                                        ''
+                                        }
                                       </Link>
                                     </div>
                                   </div>
                                   <div className="opening-times">
                                     <Image src={clockSVG}></Image>
                                     <p>
-                                      {/* {
+                                      {
                                         carouseltranslations['open_times'][
-                                          this.props.lang
+                                          currentLang
                                         ]
-                                      } */}
-                                      ''
+                                      }
                                     </p>
                                   </div>
-                                  {console.log(currentLang)}
                                 </div>
                               </div>
                             </div>
