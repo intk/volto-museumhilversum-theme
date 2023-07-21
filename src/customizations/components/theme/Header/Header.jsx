@@ -166,7 +166,7 @@ class Header extends Component {
           <Menu.Menu position="right">
             <Menu.Item>
               <NavLink
-                to="/nl/bezoek"
+                to="nl/bezoek/praktische-informatie"
                 key={headertranslations['visit_link'][this.props.lang]}
               >
                 {headertranslations['visit'][this.props.lang]}
