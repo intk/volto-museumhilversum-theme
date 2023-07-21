@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -6,6 +7,7 @@ import loadable from '@loadable/component';
 import ResponsiveContainer from '@eeacms/volto-block-image-cards/ImageCards/ResponsiveContainer';
 import { Link } from 'react-router-dom';
 import clockSVG from './clock.svg';
+import { defineMessages, useIntl } from 'react-intl';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,7 +37,7 @@ const carouseltranslations = {
     nl: 'Verwacht',
   },
   past: {
-    en: 'Past',
+    en: 'Been',
     nl: 'Geweest',
   },
 };
@@ -46,16 +48,19 @@ const getDateLabel = (start, end) => {
   const end_date = new Date(end);
   today.setHours(0, 0, 0, 0);
 
-  if (start_date > today) {
-    return carouseltranslations['expected'][this.props.lang];
-  } else if (end_date < today) {
-    return carouseltranslations['past'][this.props.lang];
-  } else {
-    return carouseltranslations['nowonview'][this.props.lang];
-  }
+  // if (start_date > today) {
+  //   return carouseltranslations['expected'][this.props.lang];
+  // } else if (end_date < today) {
+  //   return carouseltranslations['past'][this.props.lang];
+  // } else {
+  //   return carouseltranslations['nowonview'][this.props.lang];
+  // }
+  return '';
 };
 
 const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
+  const intl = useIntl();
+  const currentLang = useSelector((state) => state.intl.locale);
   const carouselSettings = {
     dots: false,
     arrows: true,
@@ -121,24 +126,27 @@ const HeaderCarousel = ({ items, linkTitle, linkHref, isEditMode }) => {
                                     </div>
                                     <div className="more">
                                       <Link to="/nl/tentoonstellingen">
-                                        {
+                                        {/* {
                                           carouseltranslations['discover'][
                                             this.props.lang
                                           ]
-                                        }
+                                        } */}
+                                        ''
                                       </Link>
                                     </div>
                                   </div>
                                   <div className="opening-times">
                                     <Image src={clockSVG}></Image>
                                     <p>
-                                      {
+                                      {/* {
                                         carouseltranslations['open_times'][
                                           this.props.lang
                                         ]
-                                      }
+                                      } */}
+                                      ''
                                     </p>
                                   </div>
+                                  {console.log(currentLang)}
                                 </div>
                               </div>
                             </div>
