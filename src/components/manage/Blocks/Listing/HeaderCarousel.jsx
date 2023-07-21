@@ -16,6 +16,7 @@ import {
   When,
   Recurrence,
 } from '@plone/volto/components/theme/View/EventDatesInfo';
+import { useSelector } from 'react-redux';
 
 const Slider = loadable(() => import('react-slick'));
 
