@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * Header component.
  * @module components/theme/Header/Header
@@ -31,6 +32,8 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 
+import config from '@plone/volto/registry';
+
 const headertranslations = {
   visit: {
     en: 'Plan your visit',
@@ -38,11 +41,9 @@ const headertranslations = {
   },
   visit_link: {
     en: '/en/visit',
-    nl: 'nl/bezoek',
+    nl: 'nl/bezoek/praktische-informatie',
   },
 };
-
-import config from '@plone/volto/registry';
 
 const getDateLabel = (start, end) => {
   const today = new Date();
