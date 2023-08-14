@@ -50,7 +50,7 @@ const cookietranslations = {
     nl: 'Accepteren',
   },
   openinghours: {
-    en: 'Openning Hours',
+    en: 'Opening Hours',
     nl: 'Openingstijden',
   },
   opendaily: {
