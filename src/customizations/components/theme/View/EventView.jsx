@@ -19,6 +19,7 @@ import config from '@plone/volto/registry';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import { useSelector } from 'react-redux';
 
 import {
   When,
@@ -32,11 +33,11 @@ const getDateLabel = (start, end) => {
   today.setHours(0, 0, 0, 0);
 
   if (start_date > today) {
-    return 'Verwacht';
+    return 'expected';
   } else if (end_date < today) {
-    return 'Geweest';
+    return 'past';
   } else {
-    return 'Nu te zien';
+    return 'nowonview';
   }
 };
 
@@ -91,6 +92,41 @@ const messages = defineMessages({
   },
 });
 
+const translations = {
+  nowonview: {
+    en: 'Now on view',
+    nl: 'Nu te zien',
+  },
+  expected: {
+    en: 'Expected',
+    nl: 'Verwacht',
+  },
+  past: {
+    en: 'Been',
+    nl: 'Geweest',
+  },
+  opening_times: {
+    en: 'Opening times',
+    nl: 'Openingstijden',
+  },
+  plan_your_visit: {
+    en: 'Plan your visit',
+    nl: 'Plan je bezoek',
+  },
+  share_article: {
+    en: 'Share article',
+    nl: 'Deel Dit Artikel',
+  },
+  open_daily: {
+    en: 'Open daily from 11 a.m. to 5 p.m.',
+    nl: 'Dagelijks open van 11 tot 17 uur.',
+  },
+  visit_link: {
+    en: '/en/visit',
+    nl: '/nl/bezoek',
+  },
+};
+
 /**
  * EventView view component class.
  * @function EventView
@@ -100,12 +136,13 @@ const messages = defineMessages({
 const EventView = ({ intl, content }) => {
   const blocksFieldname = getBlocksFieldname(content);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
+  const currentLang = useSelector((state) => state.intl.locale);
 
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <Segment floated="left" className="event-details-wrapper">
         <Header dividing sub>
-          {getDateLabel(content.start, content.end)}
+          {translations[getDateLabel(content.start, content.end)][currentLang]}
         </Header>
         <When
           start={content.start}
@@ -114,20 +151,20 @@ const EventView = ({ intl, content }) => {
           open_end={content.open_end}
         />
         <Header dividing sub>
-          {intl.formatMessage(messages.opening_times)}
+          {translations['opening_times'][currentLang]}
         </Header>
         <p className="opening-times">
-          Dagelijks open van 11 tot 17 uur.
+          {translations['open_daily'][currentLang]}
         </p>
 
         <div className="visit-wrapper">
-          <Link to="/nl/bezoek">
-            {intl.formatMessage(messages.plan_your_visit)}
+          <Link to={translations['visit_links'][currentLang]}>
+            {translations['plan_your_visit'][currentLang]}
           </Link>
         </div>
 
         <Header dividing sub>
-          {intl.formatMessage(messages.share_article)}
+          {translations['share_article'][currentLang]}
         </Header>
         <div className="share-buttons-wrapper">
           <FacebookShareButton url={content['@id']}>

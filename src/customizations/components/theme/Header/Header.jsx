@@ -40,8 +40,20 @@ const headertranslations = {
     nl: 'Plan je bezoek',
   },
   visit_link: {
-    en: '/en/visit',
-    nl: 'nl/bezoek/praktische-informatie',
+    en: '/en/visit/practical-information',
+    nl: '/nl/bezoek/praktische-informatie',
+  },
+  nowonview: {
+    en: 'Now on view',
+    nl: 'Nu te zien',
+  },
+  expected: {
+    en: 'Expected',
+    nl: 'Verwacht',
+  },
+  past: {
+    en: 'Been',
+    nl: 'Geweest',
   },
 };
 
@@ -52,11 +64,11 @@ const getDateLabel = (start, end) => {
   today.setHours(0, 0, 0, 0);
 
   if (start_date > today) {
-    return 'Verwacht';
+    return 'expected';
   } else if (end_date < today) {
-    return 'Geweest';
+    return 'past';
   } else {
-    return 'Nu te zien';
+    return 'nowonview';
   }
 };
 
@@ -166,7 +178,7 @@ class Header extends Component {
           <Menu.Menu position="right">
             <Menu.Item>
               <NavLink
-                to="nl/bezoek/praktische-informatie"
+                to={headertranslations['visit_link'][this.props.lang]}
                 key={headertranslations['visit_link'][this.props.lang]}
               >
                 {headertranslations['visit'][this.props.lang]}
@@ -232,7 +244,11 @@ class Header extends Component {
                   {is_event && (
                     <div className="label-wrapper">
                       <Label color="black">
-                        {getDateLabel(content.start, content.end)}
+                        {
+                          headertranslations[
+                            getDateLabel(content.start, content.end)
+                          ][this.props.lang]
+                        }
                       </Label>
                     </div>
                   )}
