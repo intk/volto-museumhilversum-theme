@@ -16,3 +16,8 @@ msgstr ""
 "Language-Code: pt-br\n"
 "Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8\n"
+
+#: components/theme/View/HomepageView
+# defaultMessage: Unknown Block {block}
+msgid "Unknown Block"
+msgstr ""

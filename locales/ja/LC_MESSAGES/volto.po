@@ -17,3 +17,8 @@ msgstr ""
 "Language-Name: Japanese\n"
 "Preferred-Encodings: utf-8\n"
 "X-Is-Fallback-For: ja-jp\n"
+
+#: components/theme/View/HomepageView
+# defaultMessage: Unknown Block {block}
+msgid "Unknown Block"
+msgstr ""

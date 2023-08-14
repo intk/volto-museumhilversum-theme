@@ -30,4 +30,7 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
-
+#: components/theme/View/HomepageView
+# defaultMessage: Unknown Block {block}
+msgid "Unknown Block"
+msgstr ""

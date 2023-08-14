@@ -10,3 +10,8 @@ msgstr ""
 "Content-Type: \n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#: components/theme/View/HomepageView
+# defaultMessage: Unknown Block {block}
+msgid "Unknown Block"
+msgstr ""
