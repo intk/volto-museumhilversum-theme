@@ -158,7 +158,7 @@ const EventView = ({ intl, content }) => {
         </p>
 
         <div className="visit-wrapper">
-          <Link to={translations['visit_links'][currentLang]}>
+          <Link to={translations['visit_link'][currentLang]}>
             {translations['plan_your_visit'][currentLang]}
           </Link>
         </div>
