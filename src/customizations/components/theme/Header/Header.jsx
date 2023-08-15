@@ -52,7 +52,7 @@ const headertranslations = {
     nl: 'Verwacht',
   },
   past: {
-    en: 'Been',
+    en: 'Past',
     nl: 'Geweest',
   },
 };

@@ -102,7 +102,7 @@ const translations = {
     nl: 'Verwacht',
   },
   past: {
-    en: 'Been',
+    en: 'Past',
     nl: 'Geweest',
   },
   opening_times: {
