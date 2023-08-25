@@ -122,7 +122,7 @@ const translations = {
     nl: 'Dagelijks open van 11 tot 17 uur.',
   },
   visit_link: {
-    en: '/en/visit',
+    en: '/en/visit/practical-information',
     nl: '/nl/bezoek',
   },
 };
