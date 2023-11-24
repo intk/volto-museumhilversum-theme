@@ -529,7 +529,7 @@ body.has-toolbar-collapsed {
                 max-width: 450px;
 
                 @media(max-width: @largestTabletScreen) {
-                    padding-top: 33px;
+                    padding-top: 0px;
                     padding-bottom: 15px;
                 }
 
@@ -753,6 +753,9 @@ body.has-mobile-menu-open {
             }
         }
     }
+    .menu-language-selector{
+        display: none;
+    }
 }
 
 
@@ -906,6 +909,22 @@ div.header-wrapper .item-language-selector {
         p.documentDescription {
             text-align: @descriptionNavTextAlignMobile;
         }
+    }
+    .menu-language-selector{
+        display: flex !important;
+        flex-direction: row;
+        margin-top: 33px;
+        margin-left: 15px;
+        margin-bottom: 2px;
+    }
+    .menu-language-selector > * {
+        margin-right: 5px;
+    }
+    .menu-language-selector .seperator {
+        color: #000;
+        // font-size: 27px !important;
+        margin-bottom: 45px !important;
+        font-family: 'Helvetica Neue', Arial;
     }
 }
 

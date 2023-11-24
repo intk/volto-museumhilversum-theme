@@ -16,6 +16,7 @@ import { getNavigation } from '@plone/volto/actions';
 import { CSSTransition } from 'react-transition-group';
 import NavItems from '@plone/volto/components/theme/Navigation/NavItems';
 import { SearchWidget } from '@plone/volto/components';
+import LanguageSelectorMenu from '../LanguageSelector/LanguageSelectorMenu';
 
 const messages = defineMessages({
   closeMobileMenu: {
@@ -82,7 +83,6 @@ class Navigation extends Component {
       this.container.current &&
       !this.container.current.contains(event.target)
     ) {
-      console.log(event.target);
       this.setState({
         isMobileMenuOpen: false,
       });
@@ -212,6 +212,7 @@ class Navigation extends Component {
             <div className="mobile-menu-nav">
               <Menu stackable pointing secondary>
                 <NavItems items={this.props.items} lang={this.props.lang} />
+                <LanguageSelectorMenu />
                 <div className="menu-search-wrapper">
                   <SearchWidget />
                 </div>
