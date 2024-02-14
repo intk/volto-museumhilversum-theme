@@ -83,9 +83,9 @@ const cookietranslations = {
   },
   youcanbecome: {
     en:
-      'For only 30 euros a year, you can become a Museum Friend. By doing so, you support not only Museum Hilversum, but will also receive a special pass that allows free admission to all exhibitions.',
+      'For only 40 euros a year, you can become a Museum Friend. By doing so, you support not only Museum Hilversum, but will also receive a special pass that allows free admission to all exhibitions.',
     nl:
-      'Voor slechts 30 euro per jaar ben je al Museumvriend. Daarmee steun je niet alleen Museum Hilversum maar krijg je ook een speciale pas waarmee je gratis toegang hebt tot alle tentoonstellingen.',
+      'Voor slechts 40 euro per jaar ben je al Museumvriend. Daarmee steun je niet alleen Museum Hilversum maar krijg je ook een speciale pas waarmee je gratis toegang hebt tot alle tentoonstellingen.',
   },
   signup: {
     en: 'Sign up as a friend',
