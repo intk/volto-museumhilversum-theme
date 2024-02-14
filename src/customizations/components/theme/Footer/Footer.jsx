@@ -34,8 +34,8 @@ const cookietranslations = {
     nl: 'Meer info',
   },
   signuplink: {
-    en: '/en/about-us/friends',
-    nl: '/nl/over-ons/vrienden',
+    en: '/en/about-us/become-a-friend',
+    nl: '/nl/over-ons/vrienden-worden',
   },
   visitlink: {
     en: '/en/visit',
