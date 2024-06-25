@@ -50,8 +50,8 @@ const cookietranslations = {
     nl: 'Accepteren',
   },
   openinghours: {
-    en: 'Opening Hours',
-    nl: 'Openingstijden',
+    en: 'Get Directions',
+    nl: 'Routebeschrijving',
   },
   opendaily: {
     en: 'Open daily from 11 a.m. to 5 p.m.',
