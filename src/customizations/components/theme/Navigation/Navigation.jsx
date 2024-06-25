@@ -241,6 +241,14 @@ class Navigation extends Component {
                       Facebook
                     </a>
                   </h5>
+                  <h5>
+                    <a
+                      href="https://www.linkedin.com/company/museum-hilversum/"
+                      className="social-media-link"
+                    >
+                      Linkedin
+                    </a>
+                  </h5>
                 </div>
               </Menu>
             </div>
