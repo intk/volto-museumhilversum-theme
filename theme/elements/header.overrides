@@ -492,7 +492,7 @@ body.has-toolbar-collapsed {
 
             .menu-social-media {
                 width: 100%;
-                max-width: 380px;
+                max-width: 450px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
