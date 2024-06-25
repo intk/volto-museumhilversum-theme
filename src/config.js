@@ -20,11 +20,12 @@ import CookieBanner from 'volto-cookie-banner/CookieBannerContainer';
 export default function applyConfig(config) {
   config.settings = {
     ...config.settings,
-    devProxyToApiPath: 'http://localhost:11080/museumhilversum',
+    devProxyToApiPath: 'http://localhost:8080/Plone',
     isMultilingual: true,
     supportedLanguages: ['en', 'nl'],
     defaultLanguage: 'en',
     navDepth: 2,
+    contentMetadataTagsImageField: 'preview_image',
     appExtras: [
       ...config.settings.appExtras,
       {
