@@ -1,26 +1,27 @@
 import '@plone/volto/config';
-import TestimonialsListingBlockTemplate from './components/manage/Blocks/Listing/TestimonialsTemplate';
-import SliderBlockTemplate from './components/manage/Blocks/Listing/SliderTemplate';
-import SliderListingBlockTemplate from './components/manage/Blocks/Listing/SliderListing';
-import HeaderCarouselTemplate from './components/manage/Blocks/Listing/HeaderCarousel';
-import ListingsBlockTemplate from './components/manage/Blocks/Listing/ListingTemplate';
-import ListingsBlockTemplateTwoColumns from './components/manage/Blocks/Listing/ListingTemplateTwoColumns';
-import ListingsBlockSquaresTemplate from './components/manage/Blocks/Listing/ListingTemplateSquares';
-import ListingsBlockFourSquaresTemplate from './components/manage/Blocks/Listing/ListingTemplateFourSquares';
-import ButtonsBlockTemplate from './components/manage/Blocks/Listing/ButtonsTemplate';
+import CookieBanner from 'volto-cookie-banner/CookieBannerContainer';
 import {
   ColumnsView,
-  MultipleContentView,
   HomepageView,
-  WebslidesView,
+  MultipleContentView,
   WebslidesBlocksView,
+  WebslidesView,
 } from './components';
-import CookieBanner from 'volto-cookie-banner/CookieBannerContainer';
+import ButtonsBlockTemplate from './components/manage/Blocks/Listing/ButtonsTemplate';
+import HeaderCarouselTemplate from './components/manage/Blocks/Listing/HeaderCarousel';
+import ListingsBlockTemplate from './components/manage/Blocks/Listing/ListingTemplate';
+import ListingsBlockFourSquaresTemplate from './components/manage/Blocks/Listing/ListingTemplateFourSquares';
+import ListingsBlockSquaresTemplate from './components/manage/Blocks/Listing/ListingTemplateSquares';
+import ListingsBlockTemplateTwoColumns from './components/manage/Blocks/Listing/ListingTemplateTwoColumns';
+import SliderListingBlockTemplate from './components/manage/Blocks/Listing/SliderListing';
+import SliderBlockTemplate from './components/manage/Blocks/Listing/SliderTemplate';
+import TestimonialsListingBlockTemplate from './components/manage/Blocks/Listing/TestimonialsTemplate';
 
 export default function applyConfig(config) {
   config.settings = {
     ...config.settings,
     devProxyToApiPath: 'http://localhost:11080/museumhilversum',
+    // devProxyToApiPath: 'http://localhost:8080/Plone', // For local dev
     isMultilingual: true,
     supportedLanguages: ['en', 'nl'],
     defaultLanguage: 'en',

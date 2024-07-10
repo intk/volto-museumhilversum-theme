@@ -3,19 +3,16 @@
  * @module components/theme/Footer/Footer
  */
 
-import React from 'react';
-import { Container, List, Segment } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-import { useSelector } from 'react-redux';
-import config from '@plone/volto/registry';
 import { useTagManager } from '@package/components';
-import { Grid, Image } from 'semantic-ui-react';
 import { Logo } from '@plone/volto/components';
-import SponsorImage from './NLSponsor.svg';
-import ArrowUpImage from './ArrowUp.svg';
+import config from '@plone/volto/registry';
+import CookieConsent from 'react-cookie-consent';
+import { defineMessages, injectIntl } from 'react-intl';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import CookieConsent, { Cookies } from 'react-cookie-consent';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { Grid, Image, Segment } from 'semantic-ui-react';
+import ArrowUpImage from './ArrowUp.svg';
 
 const messages = defineMessages({
   copyright: {
@@ -38,8 +35,8 @@ const cookietranslations = {
     nl: '/nl/over-ons/vrienden-worden',
   },
   visitlink: {
-    en: '/en/visit',
-    nl: '/nl/bezoek',
+    en: '/en/visit/practical-information',
+    nl: '/nl/bezoek/praktische-informatie',
   },
   text: {
     en: 'We use cookies to enhance our website.',
@@ -50,12 +47,12 @@ const cookietranslations = {
     nl: 'Accepteren',
   },
   openinghours: {
-    en: 'Get Directions',
-    nl: 'Routebeschrijving',
+    en: 'Opening Times',
+    nl: 'Openingstijden',
   },
   opendaily: {
-    en: 'Open daily from 11 a.m. to 5 p.m.',
-    nl: 'Dagelijks open van 11 tot 17 uur.',
+    en: 'Open tuesday through sunday from 11 a.m. To 5 p.m.',
+    nl: 'Dagelijks open van 11 tot 17 uur',
   },
   planyourvisit: {
     en: 'Plan your visit',
