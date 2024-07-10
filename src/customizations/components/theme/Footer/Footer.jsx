@@ -52,7 +52,7 @@ const cookietranslations = {
   },
   opendaily: {
     en: 'Open tuesday through sunday from 11 a.m. To 5 p.m.',
-    nl: 'Dagelijks open van 11 tot 17 uur',
+    nl: 'Van Dinsdag tot en met Zondag geopend van 11 tot 17 uur',
   },
   planyourvisit: {
     en: 'Plan your visit',
