@@ -273,10 +273,10 @@
 		}
     }
 
-    .slick-dots li.slick-active button:before {
-        opacity: 0.7;
-        color: black;
-    }
+    // .slick-dots li.slick-active button:before {
+    //     opacity: 0.7;
+    //     color: black;
+    // }
 
 	&.slick-dotted.slick-slider {
 		margin-bottom: 30px;
@@ -291,6 +291,12 @@
 		z-index: 1;
 
 		&:before {
+			opacity: 0.7 !important;
+			color: #000000 !important;
+		}
+
+		&:hover:before {
+			opacity: 1 !important;
 			color: #000000 !important;
 		}
 
