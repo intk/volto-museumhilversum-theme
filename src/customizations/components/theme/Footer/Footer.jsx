@@ -175,7 +175,9 @@ const Footer = ({ intl }) => {
           <Grid.Row>
             <Grid.Column mobile={12} tablet={6} computer={4}>
               <h4>{cookietranslations['openinghours'][lang]}</h4>
-              <p>{cookietranslations['opendaily'][lang]}</p>
+              <p id="open-daily-text" lang={lang}>
+                {cookietranslations['opendaily'][lang]}
+              </p>
               <Link to={cookietranslations['visitlink'][lang]}>
                 {' '}
                 {cookietranslations['planyourvisit'][lang]}

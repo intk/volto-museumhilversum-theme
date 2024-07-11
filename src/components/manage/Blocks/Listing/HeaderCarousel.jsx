@@ -1,29 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Image, Label, Icon } from 'semantic-ui-react';
-import loadable from '@loadable/component';
 import ResponsiveContainer from '@eeacms/volto-block-image-cards/ImageCards/ResponsiveContainer';
+import loadable from '@loadable/component';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { Image, Label } from 'semantic-ui-react';
 import clockSVG from './clock.svg';
-import { defineMessages, useIntl } from 'react-intl';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './HeaderCarousel.less';
-import {
-  When,
-  Recurrence,
-} from '@plone/volto/components/theme/View/EventDatesInfo';
+import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 import { useSelector } from 'react-redux';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import './HeaderCarousel.less';
 
 const Slider = loadable(() => import('react-slick'));
 
 const carouseltranslations = {
   open_times: {
-    en: 'Daily opened from 11 am until 5 pm.',
-    nl: 'Dagelijks open van 11 tot 17 uur.',
+    en: 'Open tuesday through sunday from 11 a.m. To 5 p.m.',
+    nl: 'Van Dinsdag tot en met Zondag geopend van 11 tot 17 uur',
   },
   discover: {
     en: 'Discover more',

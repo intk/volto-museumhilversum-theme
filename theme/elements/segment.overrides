@@ -742,6 +742,11 @@ body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed):not(.section-cont
     padding: @footerPadding;
     padding-top: 0px;
 
+    p#open-daily-text {
+        hyphens: auto;
+        word-break: break-word;
+    }
+
     .ui.segment {
         padding: @footerUiSegmentPadding;
         margin: @footerUiSegmentMargin;
