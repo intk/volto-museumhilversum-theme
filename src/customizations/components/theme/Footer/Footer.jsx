@@ -51,8 +51,8 @@ const cookietranslations = {
     nl: 'Openingstijden',
   },
   opendaily: {
-    en: 'Open tuesday through sunday from 11 a.m. To 5 p.m.',
-    nl: 'Van Dinsdag tot en met Zondag geopend van 11 tot 17 uur',
+    en: 'Open Monday through Sunday from 11 a.m. to 5 p.m.',
+    nl: 'Van maandag tot en met zondag geopend van 11 tot 17 uur',
   },
   planyourvisit: {
     en: 'Plan your visit',
